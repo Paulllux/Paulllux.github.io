@@ -88,7 +88,11 @@
             border: none;
             cursor: pointer;
             font-size: 18px;
-            margin-top: 20px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #BF00FF;
         }
         a {
             color: #39FF14;
@@ -125,6 +129,12 @@
             color: #fff;
             font-size: 30px;
             cursor: pointer;
+        }
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
     </style>
 </head>
@@ -168,8 +178,10 @@
         </section>
         <section id="download">
             <h2>Download & Installation</h2>
-            <p>Get started with BeatForge from our <a href="https://github.com/Paulllux/BeatForge">GitHub repository</a>.</p>
-            <button>Download Now</button>
+            <div class="download-buttons">
+                <a href="files/BeatForge-signed.pkg"><button>Download for Mac</button></a>
+                <a href="files/BeatForge.vst3"><button>Download for Windows</button></a>
+            </div>
         </section>
         <section id="documentation">
             <h2>Documentation</h2>
@@ -185,7 +197,7 @@
     </footer>
     <div id="demo-modal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close">×</span>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
