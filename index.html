@@ -221,7 +221,7 @@
         <div class="modal-content">
             <span class="close">×</span>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&autoplay=1" title="BeatForge Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="demo-video" title="BeatForge Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -237,19 +237,21 @@
         const modal = document.getElementById('demo-modal');
         const btn = document.getElementById('demo-btn');
         const span = document.getElementsByClassName('close')[0];
+        const iframe = document.getElementById('demo-video');
+        const videoSrc = 'https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&autoplay=1&muted=1';
+        
         btn.onclick = function() {
+            iframe.src = videoSrc; // Set src to trigger autoplay
             modal.style.display = 'block';
         }
         span.onclick = function() {
             modal.style.display = 'none';
-            const iframe = document.querySelector('.video-container iframe');
-            iframe.src = iframe.src.replace('&autoplay=1', ''); // Reset video to stop playback
+            iframe.src = ''; // Clear src to stop playback
         }
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = 'none';
-                const iframe = document.querySelector('.video-container iframe');
-                iframe.src = iframe.src.replace('&autoplay=1', ''); // Reset video to stop playback
+                iframe.src = ''; // Clear src to stop playback
             }
         }
     </script>
