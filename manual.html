@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatForge Manual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #E0E0E0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 20px;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            color: #00FFFF;
+            margin: 0;
+        }
+        header ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        header a {
+            color: #E0E0E0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #39FF14;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #39FF14;
+            font-size: 28px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #00FFFF;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        p, li {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        a {
+            color: #39FF14;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #BF00FF;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 2px solid #39FF14;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>BeatForge</h1>
+            <ul>
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="manual.html">Docs</a></li>
+                <li><a href="index.html#support">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>BeatForge Manual</h2>
+
+        <h3>Introduction</h3>
+        <p>BeatForge is a powerful drum sequencer and sampler plugin designed for crafting dynamic drum patterns and beats. It provides a comprehensive set of tools for track management, step sequencing, effects processing, and song creation, making it an ideal choice for music producers.</p>
+        <p>The idea was to make something that looks like your basic step sequencer, until you dig deeper.</p>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+Main+Interface" alt="BeatForge Main Interface">
+
+        <h3>Key Features</h3>
+        <ul>
+            <li>Up to 64 tracks</li>
+            <li>16-step sequencer per bar</li>
+            <li>Multiple bars per song</li>
+            <li>Sample loading and management</li>
+            <li>Solo and mute functionality</li>
+            <li>Volume, pan, swing, and phase invert controls</li>
+            <li>ADSR envelope</li>
+            <li>Pitch shift, distortion, and FX send</li>
+            <li>High-pass and low-pass filters</li>
+            <li>Three LFOs per track</li>
+            <li>MIDI input and output support, including Synth Roll Mode</li>
+            <li>Song saving and loading</li>
+        </ul>
+
+        <h3>Installation</h3>
+        <h4>macOS</h4>
+        <ol>
+            <li><strong>Download the Installer:</strong> Obtain the BeatForge PKG installer from the <a href="https://github.com/Paulllux/BeatForge">GitHub repository</a>.</li>
+            <li><strong>Run the Installer:</strong> Double-click the downloaded <code>.pkg</code> file and follow the on-screen instructions to install BeatForge.</li>
+            <li><strong>Automatic File Placement:</strong> The PKG installer will automatically install the plugin components into the following standard locations:
+                <ul>
+                    <li><strong>VST3 Plugin:</strong> <code>/Library/Audio/Plug-Ins/VST3/BeatForge.vst3</code></li>
+                    <li><strong>Audio Unit (AU) Plugin:</strong> <code>/Library/Audio/Plug-Ins/Components/BeatForge.component</code></li>
+                </ul>
+            </li>
+            <li><strong>Post-Installation:</strong> Restart your Digital Audio Workstation (DAW) to allow it to scan and recognize the newly installed plugins.</li>
+        </ol>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+Mac+Installation" alt="BeatForge Mac Installation">
+
+        <h4>Windows</h4>
+        <ol>
+            <li><strong>Download the Plugin:</strong> Download the BeatForge VST3 plugin file (<code>BeatForge.vst3</code>) from the <a href="https://github.com/Paulllux/BeatForge">GitHub repository</a>.</li>
+            <li><strong>Manual Installation:</strong> Copy the <code>BeatForge.vst3</code> file to the standard VST3 directory: <code>C:\Program Files\Common Files\VST3\</code></li>
+            <li><strong>DAW Configuration:</strong> Open your DAW and rescan your plugin folders if the plugin isn’t automatically detected. Check your DAW’s settings to ensure <code>C:\Program Files\Common Files\VST3\</code> is included in the plugin search path.</li>
+        </ol>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+Windows+Installation" alt="BeatForge Windows Installation">
+
+        <h4>Notes</h4>
+        <ul>
+            <li><strong>DAW Compatibility:</strong> Ensure your DAW supports VST3 (Windows and macOS) or AU (macOS) formats.</li>
+            <li><strong>Verification:</strong> If the plugin doesn’t appear in your DAW, confirm the files are in the correct locations and rescan plugins manually.</li>
+        </ul>
+
+        <h3>User Interface Overview</h3>
+        <p>The plugin's user interface is intuitive and divided into several key sections:</p>
+        <ul>
+            <li><strong>Track Selector:</strong> Manage tracks by adding, deleting, or selecting them.</li>
+            <li><strong>Track Controls:</strong> Adjust track name, sample selection, solo, and mute settings.</li>
+            <li><strong>Step Sequencer:</strong> Program drum hits with 16-step buttons per bar.</li>
+            <li><strong>Tab Controls:</strong> Switch between parameter tabs: Mix, ADSR, FX, EQ, and LFO.</li>
+            <li><strong>Bar Controls:</strong> Set total bars, navigate between bars, and copy/paste bar data.</li>
+            <li><strong>Song Controls:</strong> Save and load songs via the "Song" button.</li>
+        </ul>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+User+Interface" alt="BeatForge User Interface">
+
+        <h3>Track Management</h3>
+        <p><strong>Adding a Track:</strong> Click the "Add Track" button to create a new track (up to 64 tracks).</p>
+        <p><strong>Deleting a Track:</strong> Right-click the track name and select "Delete Track" from the context menu.</p>
+        <p><strong>Track Settings:</strong></p>
+        <ul>
+            <li><strong>Name:</strong> Double-click the track name to edit it.</li>
+            <li><strong>Sample:</strong> Use the dropdown to select or load a sample, or drag and drop an audio file onto the track.</li>
+            <li><strong>Solo (S):</strong> Mutes all other tracks when enabled.</li>
+            <li><strong>Mute (M):</strong> Silences the track.</li>
+        </ul>
+        <p>Right-clicking a track name opens a context menu with additional options:</p>
+        <ul>
+            <li><strong>Delete Track:</strong> Removes the track.</li>
+            <li><strong>Delete Sample:</strong> Clears the loaded sample.</li>
+            <li><strong>Random Sample Mode:</strong> Toggles random sample selection from a folder.</li>
+            <li><strong>Output Settings:</strong> Choose the audio output channel pair (e.g., Main 1-2, Aux 3-4). Set more output in your DAW first to options besides Main 1-2.</li>
+            <li><strong>MIDI Settings:</strong> Set MIDI note (0-127 or None) and channel (1-16 or None). Choose Direction, midi in or midi out to control other VST instruments.</li>
+            <li><strong>Mute Group:</strong> Assign to a mute group (1-8 or None) to mute other tracks in the same group when triggered. Usually used for open and closed hihats.</li>
+            <li><strong>Synth Roll Mode:</strong> Enable to trigger a continuous roll of the sample at the frequency of the midi note while a MIDI note is held (requires MIDI note and channel).</li>
+        </ul>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+Track+Management" alt="BeatForge Track Management">
+
+        <h3>Step Sequencing</h3>
+        <p>Each track features a 16-step sequencer for programming drum hits:</p>
+        <ul>
+            <li><strong>Step Buttons:</strong> Click to toggle a hit on or off.</li>
+            <li><strong>Hit Chance:</strong> Right-click a step to set its probability (5% to 100% in 5% increments).</li>
+            <li><strong>Groups:</strong> Assign steps to edit groups (1-32) via right-click menu for shared settings.</li>
+            <li><strong>Roll (Flam):</strong> Right-click to set roll count (1-16) for repeated hits within a step.</li>
+        </ul>
+        <p>Right-clicking a step button provides options:</p>
+        <ul>
+            <li><strong>Chance:</strong> Adjust hit probability.</li>
+            <li><strong>Group:</strong> Set the edit group for shared parameter control.</li>
+            <li><strong>Group Settings:</strong> Copy or paste settings (e.g., volume, pitch) between groups.</li>
+            <li><strong>Roll:</strong> Configure repeated hits.</li>
+        </ul>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+Step+Sequencer" alt="BeatForge Step Sequencer">
+
+        <h3>Bar and Song Management</h3>
+        <p><strong>Total Bars:</strong> Use the "+" and "−" buttons next to "Total Bars" to set the song length (minimum 1 bar).</p>
+        <p><strong>Current Bar:</strong> Navigate between bars using the "+" and "−" buttons next to "Bar X".</p>
+        <p><strong>Copy/Paste Bar:</strong></p>
+        <ul>
+            <li>Click "Copy" to save the current bar's settings.</li>
+            <li>Click "Paste" to apply the copied settings to another bar.</li>
+            <li>Right-click a track for track-specific copy/paste options.</li>
+        </ul>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+Bar+Management" alt="BeatForge Bar Management">
+
+        <h3>Effects and Processing</h3>
+        <p>Effects and processing options are organized into tabs per track:</p>
+        <h4>Mix Tab</h4>
+        <ul>
+            <li><strong>Volume:</strong> Adjust track volume (-60 dB to +12 dB).</li>
+            <li><strong>Pan:</strong> Set stereo position (-1 to +1).</li>
+            <li><strong>Swing:</strong> Apply swing timing (50% to 75%) to the even steps, similar to your classic Roland Drumcomputers.</li>
+            <li><strong>Phase Invert:</strong> Toggle to invert the audio phase. Try what sounds best.</li>
+        </ul>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+Mix+Tab" alt="BeatForge Mix Tab">
+
+        <h4>ADSR Tab</h4>
+        <ul>
+            <li><strong>Attack:</strong> Set onset time (0 to 0.02 seconds). Turn up for smoother hits.</li>
+            <li><strong>Decay:</strong> Control fade-out time (0.01 to 1000 ms). Make those hits shorter, in case you need to tame those long 808 samples, cut off reverb etc.</li>
+            <li><strong>Sustain:</strong> Adjust sustain level (0 to 1). Decay won't do anything when this is up.</li>
+            <li><strong>Release:</strong> Set release time (1 to 2000 ms). How fast the sample stops playing when the next hit comes, if this is high, you'll get overlaps. 4 voices are used per track.</li>
+        </ul>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+ADSR+Tab" alt="BeatForge ADSR Tab">
+
+        <h4>FX Tab</h4>
+        <ul>
+            <li><strong>Pitch Shift:</strong> Adjust pitch (-12 to +12 semitones).</li>
+            <li><strong>Distortion:</strong> Increase distortion drive (0 to 30 dB); right-click for type (Soft, Hard, Foldback, Hardcore). Make Drums Dirty Again.</li>
+            <li><strong>FX Send:</strong> Control send level to FX bus (-112 dB to +12 dB). To send to an external processor, or throw in an IR for internal reverb.</li>
+            <li><strong>Reverse:</strong> Toggle reverse playback. For those swells.</li>
+            <li><strong>Trim:</strong> Set reverse trim steps (0 to 16). If you set trim to 2 for example, program the reversed step two steps before where you want the peak to come.</li>
+            <li><strong>Microtiming:</strong> Adjust timing offset (-50 to +50 ms).</li>
+            <li><strong>BitCrush:</strong> Reduce bit depth (2 to 16 bits; 16 = Off). For those old videogame sounds, welcome to pacman zone.</li>
+        </ul>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+FX+Tab" alt="BeatForge FX Tab">
+
+        <h4>EQ Tab</h4>
+        <ul>
+            <li><strong>High-Pass Filter:</strong> Toggle and set cutoff (20 Hz to 20 kHz).</li>
+            <li><strong>Low-Pass Filter:</strong> Toggle and set cutoff (20 Hz to 20 kHz).</li>
+            <li>Very basic until now, just to tame excessive highs or lows. I recommend using separate outputs if you need to fine-tune the sounds more.</li>
+        </ul>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+EQ+Tab" alt="BeatForge EQ Tab">
+
+        <h4>LFO Tab</h4>
+        <ul>
+            <li>Three LFOs per track with:
+                <ul>
+                    <li><strong>Enable:</strong> Toggle LFO on/off.</li>
+                    <li><strong>Frequency:</strong> Set rate (0.1 to 20 Hz or 0.1 to 10 per beat; right-click to switch mode).</li>
+                    <li><strong>Amplitude:</strong> Adjust depth (0% to 100%).</li>
+                    <li>Right-click for options: Mode (Hz or Per Beat), Type (Sine, Square, Sawtooth, Triangle, White Noise), Targets (e.g., Volume, Pitch).</li>
+                </ul>
+            </li>
+            <li>This can make some really weird sounds, release your inner Aphex Twin with these, experiment. Make it play melodies by targeting the pitch shift. Combine with hit chances, random samples and every bar can sound completely different.</li>
+        </ul>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+LFO+Tab" alt="BeatForge LFO Tab">
+
+        <h3>MIDI and Output Settings</h3>
+        <p><strong>MIDI Note:</strong> Right-click a track to set a MIDI note (0-127 or None) for triggering or output.</p>
+        <p><strong>MIDI Channel:</strong> Select a MIDI channel (1-16 or None) for input/output.</p>
+        <p><strong>Direction:</strong> Choose MIDI Input or Output mode via the context menu.</p>
+        <p><strong>Output Channel:</strong> Assign the track to an audio output pair (e.g., Main 1-2, Aux 3-4).</p>
+        <p><strong>Synth Roll Mode:</strong> When enabled, holding the assigned MIDI note triggers a continuous roll of the sample until the note is released.</p>
+        <p>Global MIDI and FX settings:</p>
+        <ul>
+            <li><strong>FX Mode:</strong> Choose "External Output" or "Internal Reverb" via the dropdown.
+                <ul>
+                    <li><strong>External Output:</strong> Select output pair (e.g., Main 1-2).</li>
+                    <li><strong>Internal Reverb:</strong> Load an impulse response (IR) file and adjust reverb return level (0 to 1).</li>
+                </ul>
+            </li>
+        </ul>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+MIDI+Settings" alt="BeatForge MIDI Settings">
+
+        <h3>Song Saving and Loading</h3>
+        <p><strong>Save Song:</strong> Click the "Song" button and select "Save" (overwrites current file) or "Save As" (choose new file).</p>
+        <p><strong>Load Song:</strong> Select "Load Song" to open a <code>.drsong</code> file, or use the song dropdown to switch between files in the same directory.</p>
+        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+Song+Management" alt="BeatForge Song Management">
+
+        <h3>Tips and Tricks</h3>
+        <ul>
+            <li><strong>Random Samples:</strong> Enable "Random Sample Mode" to cycle through samples in a folder automatically.</li>
+            <li><strong>Dynamic Patterns:</strong> Use hit chances and rolls to create evolving rhythms.</li>
+            <li><strong>LFO Modulation:</strong> Assign LFOs to parameters like pitch or volume for movement in your patterns.</li>
+            <li><strong>Mute Groups:</strong> Group tracks (e.g., hi-hats) to cut off overlapping sounds naturally.</li>
+            <li><strong>FX Bus:</strong> Send multiple tracks to the FX bus for unified reverb or external processing.</li>
+            <li><strong>Synth Roll Mode:</strong> Use this mode for creating dynamic fills or textures by holding MIDI notes.</li>
+        </ul>
+
+        <p>This manual provides everything you need to start using BeatForge effectively. Enjoy creating your beats!</p>
+    </main>
+    <footer>
+        <p>© 2025 BeatForge. All rights reserved.</p>
+    </footer>
+</body>
+</html>

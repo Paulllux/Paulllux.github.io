@@ -115,20 +115,42 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0,0,0,0.8);
+            overflow: auto;
         }
         .modal-content {
             position: relative;
-            margin: 15% auto;
-            width: 80%;
-            max-width: 640px;
+            margin: 5% auto;
+            width: 90%;
+            max-width: 800px;
+            background-color: #1E1E1E;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #39FF14;
         }
         .close {
             position: absolute;
             top: 10px;
             right: 20px;
-            color: #fff;
+            color: #39FF14;
             font-size: 30px;
             cursor: pointer;
+        }
+        .close:hover {
+            color: #BF00FF;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         .download-buttons {
             display: flex;
@@ -146,7 +168,7 @@
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#download">Download</a></li>
-                <li><a href="#documentation">Docs</a></li>
+                <li><a href="manual.html">Docs</a></li>
                 <li><a href="#support">Support</a></li>
             </ul>
         </nav>
@@ -185,11 +207,11 @@
         </section>
         <section id="documentation">
             <h2>Documentation</h2>
-            <p>See our <a href="https://github.com/Paulllux/BeatForge/blob/main/README.md">README</a> for setup and usage details.</p>
+            <p>See our <a href="manual.html">Manual</a> for setup and usage details.</p>
         </section>
         <section id="support">
             <h2>Support</h2>
-            <p>Need help? Contact us at [your-email@example.com] or join our community!</p>
+            <p>Need help? Contact us at <a href="mailto:beatforgehelp@gmail.com">beatforgehelp@gmail.com</a> or join our community!</p>
         </section>
     </main>
     <footer>
@@ -198,7 +220,9 @@
     <div id="demo-modal" class="modal">
         <div class="modal-content">
             <span class="close">×</span>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&autoplay=1" title="BeatForge Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
     <script>
@@ -218,10 +242,14 @@
         }
         span.onclick = function() {
             modal.style.display = 'none';
+            const iframe = document.querySelector('.video-container iframe');
+            iframe.src = iframe.src.replace('&autoplay=1', ''); // Reset video to stop playback
         }
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = 'none';
+                const iframe = document.querySelector('.video-container iframe');
+                iframe.src = iframe.src.replace('&autoplay=1', ''); // Reset video to stop playback
             }
         }
     </script>
