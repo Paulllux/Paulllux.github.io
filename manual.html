@@ -5,86 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeatForge Manual</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #121212;
-            color: #E0E0E0;
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #000000;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 10px 20px;
-        }
-        header nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 {
-            color: #00FFFF;
-            margin: 0;
-        }
-        header ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        header a {
-            color: #E0E0E0;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        header a:hover {
-            color: #39FF14;
-        }
-        main {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h2 {
-            color: #39FF14;
-            font-size: 28px;
-            margin-top: 40px;
-        }
-        h3 {
-            color: #00FFFF;
-            font-size: 22px;
-            margin-top: 20px;
-        }
-        p, li {
-            line-height: 1.6;
-            margin: 10px 0;
-        }
-        ul, ol {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        a {
-            color: #39FF14;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #BF00FF;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-            border: 2px solid #39FF14;
-            border-radius: 5px;
-        }
-        footer {
-            background-color: #000000;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+        <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -105,8 +26,7 @@
         <h3>Introduction</h3>
         <p>BeatForge is a powerful drum sequencer and sampler plugin designed for crafting dynamic drum patterns and beats. It provides a comprehensive set of tools for track management, step sequencing, effects processing, and song creation, making it an ideal choice for music producers.</p>
         <p>The idea was to make something that looks like your basic step sequencer, until you dig deeper.</p>
-        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+Main+Interface" alt="BeatForge Main Interface">
-
+        
         <h3>Key Features</h3>
         <ul>
             <li>Up to 64 tracks</li>
@@ -126,7 +46,7 @@
         <h3>Installation</h3>
         <h4>macOS</h4>
         <ol>
-            <li><strong>Download the Installer:</strong> Obtain the BeatForge PKG installer from the <a href="https://github.com/Paulllux/BeatForge">GitHub repository</a>.</li>
+            <li><strong>Download the Installer:</strong> Get the BeatForge PKG installer from the <a href="index.html#download">Download section</a>.</li>
             <li><strong>Run the Installer:</strong> Double-click the downloaded <code>.pkg</code> file and follow the on-screen instructions to install BeatForge.</li>
             <li><strong>Automatic File Placement:</strong> The PKG installer will automatically install the plugin components into the following standard locations:
                 <ul>
@@ -136,16 +56,12 @@
             </li>
             <li><strong>Post-Installation:</strong> Restart your Digital Audio Workstation (DAW) to allow it to scan and recognize the newly installed plugins.</li>
         </ol>
-        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+Mac+Installation" alt="BeatForge Mac Installation">
-
         <h4>Windows</h4>
         <ol>
-            <li><strong>Download the Plugin:</strong> Download the BeatForge VST3 plugin file (<code>BeatForge.vst3</code>) from the <a href="https://github.com/Paulllux/BeatForge">GitHub repository</a>.</li>
+            <li><strong>Download the Plugin:</strong> Download the BeatForge VST3 plugin file (<code>BeatForge.vst3</code>) from the <a href="index.html#download">Download section</a>.</li>
             <li><strong>Manual Installation:</strong> Copy the <code>BeatForge.vst3</code> file to the standard VST3 directory: <code>C:\Program Files\Common Files\VST3\</code></li>
             <li><strong>DAW Configuration:</strong> Open your DAW and rescan your plugin folders if the plugin isn’t automatically detected. Check your DAW’s settings to ensure <code>C:\Program Files\Common Files\VST3\</code> is included in the plugin search path.</li>
         </ol>
-        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+Windows+Installation" alt="BeatForge Windows Installation">
-
         <h4>Notes</h4>
         <ul>
             <li><strong>DAW Compatibility:</strong> Ensure your DAW supports VST3 (Windows and macOS) or AU (macOS) formats.</li>
@@ -162,8 +78,7 @@
             <li><strong>Bar Controls:</strong> Set total bars, navigate between bars, and copy/paste bar data.</li>
             <li><strong>Song Controls:</strong> Save and load songs via the "Song" button.</li>
         </ul>
-        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+User+Interface" alt="BeatForge User Interface">
-
+        <img src="images/main_interface.jpg" alt="BeatForge Main Interface">
         <h3>Track Management</h3>
         <p><strong>Adding a Track:</strong> Click the "Add Track" button to create a new track (up to 64 tracks).</p>
         <p><strong>Deleting a Track:</strong> Right-click the track name and select "Delete Track" from the context menu.</p>
@@ -184,7 +99,17 @@
             <li><strong>Mute Group:</strong> Assign to a mute group (1-8 or None) to mute other tracks in the same group when triggered. Usually used for open and closed hihats.</li>
             <li><strong>Synth Roll Mode:</strong> Enable to trigger a continuous roll of the sample at the frequency of the midi note while a MIDI note is held (requires MIDI note and channel).</li>
         </ul>
-        <img src="https://via.placeholder.com/800x400.png?text=Screenshot+-+Track+Management" alt="BeatForge Track Management">
+        <div class="video-container">
+          <iframe
+            width="800"
+            height="400"
+            src="https://www.youtube.com/watch?v=FbiUPDvl2aM"
+            title="synthroll example"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
 
         <h3>Step Sequencing</h3>
         <p>Each track features a 16-step sequencer for programming drum hits:</p>
