@@ -1,106 +1,153 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
     <head>
+
         <meta charset="UTF-8">
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>BeatForge - Craft Your Sound</title>
+
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="style.css">
+
     </head>
+
 <body>
+
     <header>
+
         <nav>
+
             <h1>BeatForge</h1>
+
             <ul>
+
                 <li><a href="#hero">Home</a></li>
+
                 <li><a href="#features">Features</a></li>
+
                 <li><a href="#download">Download</a></li>
+
                 <li><a href="manual.html">Docs</a></li>
+
                 <li><a href="#support">Support</a></li>
+
             </ul>
+
         </nav>
+
     </header>
+
     <main>
+
         <section id="hero">
+
             <div class="hero-content">
+
                 <h2>Craft Your Sound</h2>
+
                 <p>A powerful tool for creating beats and shaping audio like never before.</p>
-                <button id="demo-btn">Watch Demo</button>
+
             </div>
+
         </section>
+
         <section id="features">
+
             <h2>Features</h2>
+
             <div class="feature-grid">
+
                 <div class="feature">
+
                     <h3>Intuitive Interface</h3>
+
                     <p>Design beats effortlessly with a sleek, user-friendly layout.</p>
+
                 </div>
+
                 <div class="feature">
+
                     <h3>Powerful Tools</h3>
+
                     <p>Advanced features to forge your unique sound.</p>
+
                 </div>
+
                 <div class="feature">
+
                     <h3>Customizable</h3>
+
                     <p>Tweak every detail to match your creative vision.</p>
+
                 </div>
+
             </div>
+
         </section>
+
         <section id="download">
+
             <h2>Download & Installation</h2>
+
             <div class="download-buttons">
+
                 <a href="files/BeatForge-signed.pkg"><button>Download for Mac</button></a>
+
                 <a href="files/BeatForge.vst3"><button>Download for Windows</button></a>
+
             </div>
+
         </section>
+
         <section id="documentation">
+
             <h2>Documentation</h2>
+
             <p>See our <a href="manual.html">Manual</a> for setup and usage details.</p>
+
         </section>
+
         <section id="support">
+
             <h2>Support</h2>
+
             <p>Need help? Contact us at <a href="mailto:beatforgehelp@gmail.com">beatforgehelp@gmail.com</a> or join our community!</p>
+
         </section>
+
     </main>
+
     <footer>
+
         <p>© 2025 BeatForge. All rights reserved.</p>
+
     </footer>
-    <div id="demo-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">×</span>
-            <div class="video-container">
-                <iframe id="demo-video" title="BeatForge Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
+
     <script>
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
             anchor.addEventListener('click', function (e) {
+
                 e.preventDefault();
+
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
+
                     behavior: 'smooth'
+
                 });
+
             });
+
         });
-        const modal = document.getElementById('demo-modal');
-        const btn = document.getElementById('demo-btn');
-        const span = document.getElementsByClassName('close')[0];
-        const iframe = document.getElementById('demo-video');
-        const videoSrc = 'https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&autoplay=1&muted=1';
-        
-        btn.onclick = function() {
-            iframe.src = videoSrc; // Set src to trigger autoplay
-            modal.style.display = 'block';
-        }
-        span.onclick = function() {
-            modal.style.display = 'none';
-            iframe.src = ''; // Clear src to stop playback
-        }
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = 'none';
-                iframe.src = ''; // Clear src to stop playback
-            }
-        }
+
     </script>
+
 </body>
+
 </html>
