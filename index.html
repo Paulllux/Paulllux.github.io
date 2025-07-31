@@ -1,307 +1,239 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>BeatForge - Download and Manual</title>
-
+    <title>BeatForge - Drum Machine & Sequencer Plugin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-
         body {
-
-            font-family: Arial, sans-serif;
-
-            background-color: #1a1a1a;
-
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
             color: #e0e0e0;
-
             margin: 0;
-
-            padding: 20px;
-
+            padding: 0;
             line-height: 1.6;
-
+            overflow-x: hidden;
         }
-
         h1, h2, h3 {
-
-            color: #64c8c8; /* Neon cyan */
-
+            color: #00ffff; /* Vibrant cyan for headlines */
         }
-
         a {
-
-            color: #ff00ff; /* Magenta */
-
+            color: #ff00ff; /* Magenta for links */
             text-decoration: none;
-
+            transition: color 0.3s ease;
         }
-
         a:hover {
-
-            text-decoration: underline;
-
+            color: #ff69b4; /* Softer pink on hover */
         }
-
         .container {
-
             max-width: 1200px;
-
             margin: 0 auto;
-
+            padding: 40px 20px;
         }
-
-        .download-section {
-
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            text-align: center;
+            padding: 80px 20px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #ff00ff;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ff00ff;
+        }
+        .section {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .feature-item {
             background-color: #2a2a2a;
-
             padding: 20px;
-
             border-radius: 8px;
-
-            margin-bottom: 40px;
-
+            text-align: center;
+            transition: transform 0.3s ease;
         }
-
-        .manual-section {
-
-            background-color: #2a2a2a;
-
-            padding: 20px;
-
-            border-radius: 8px;
-
+        .feature-item:hover {
+            transform: translateY(-5px);
         }
-
-        ul {
-
-            list-style-type: disc;
-
-            margin-left: 20px;
-
+        .feature-item h3 {
+            margin-bottom: 10px;
         }
-
-        code {
-
-            background-color: #3a3a3a;
-
-            padding: 2px 4px;
-
-            border-radius: 4px;
-
+        .download-section ul {
+            list-style-type: none;
+            padding: 0;
         }
-
+        .download-section li {
+            margin: 10px 0;
+        }
+        .download-section a {
+            background-color: #00ffff;
+            color: #121212;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .download-section a:hover {
+            background-color: #00cccc;
+        }
         pre {
-
             background-color: #3a3a3a;
-
-            padding: 10px;
-
-            border-radius: 4px;
-
+            padding: 15px;
+            border-radius: 8px;
             overflow-x: auto;
-
         }
-
+        code {
+            background-color: #3a3a3a;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
     </style>
-
 </head>
-
 <body>
+    <div class="hero">
+        <h1>BeatForge: Drum Machine & Sequencer Plugin</h1>
+        <p>BeatForge brings the ease of use of old-school drum computers into a modern plugin, combining classic simplicity with advanced features like sample loading, synthesis, multi-track sequencing, effects, LFO modulation, and more. Available as VST3/AU for Mac and Windows.</p>
+        <a href="#download" class="cta-button">Download Now</a>
+    </div>
 
     <div class="container">
-
-        <h1>BeatForge - Drum Machine & Sequencer Plugin</h1>
-
-        <p>BeatForge is a powerful audio plugin for creating drum patterns, sequencing, and sound design. It supports sample loading, synthesis, multi-track sequencing, effects, LFO modulation, and more. Available as a VST3/AU plugin for Mac and Windows.</p>
-
-        <div class="download-section">
-
-            <h2>Download</h2>
-
-            <p>Click the link below to download the latest version of BeatForge.</p>
-
-           <ul>
-    <li><a href="https://drive.google.com/file/d/1E3xx41f-0YrGG2kCeyOZq_uh9eTuQ499/view?usp=share_link" target="_blank">Mac Version</a></li>
-    <li><a href="https://drive.google.com/file/d/1XBecnuby7uCH3lL8vL-LbgsDyQu0fsfD/view?usp=share_link" target="_blank">Windows Version</a></li>
-</ul>
-            <p><strong>Note:</strong> This is a trial version with a 14-day trial period. Activation requires an email and code (click the purchase button). </p>
-
+        <div class="section">
+            <h2>Key Features</h2>
+            <p>Designed to offer straightforward workflow inspired by vintage drum machines, enhanced with contemporary tools for today's producers.</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Up to 64 Tracks</h3>
+                    <p>Multi-bar sequencing for building detailed patterns.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Sample & Synth Modes</h3>
+                    <p>Load audio files or use oscillators for sound creation.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>LFO Modulation</h3>
+                    <p>Three LFOs per track for dynamic parameter control.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Effects & EQ</h3>
+                    <p>Pitch, distortion, bitcrush, filters, and global reverb.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>MIDI Integration</h3>
+                    <p>Input/output support for external triggering and control.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Probability & Rolls</h3>
+                    <p>Add chance and flam effects for varied rhythms.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="manual-section">
+        <div id="download" class="section download-section">
+            <h2>Download</h2>
+            <p>Try the 14-day trial version. Activation available for full access (10€ introductory price).</p>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1E3xx41f-0YrGG2kCeyOZq_uh9eTuQ499/view?usp=share_link" target="_blank">Mac Version</a></li>
+                <li><a href="https://drive.google.com/file/d/1XBecnuby7uCH3lL8vL-LbgsDyQu0fsfD/view?usp=share_link" target="_blank">Windows Version</a></li>
+            </ul>
+            <a href="#manual" class="cta-button">View Manual</a>
+        </div>
 
+        <div id="manual" class="section manual-section">
             <h2>User Manual</h2>
-
-       
+            <p>This guide covers installation, interface, and features to help you get started with BeatForge's intuitive design.</p>
 
             <h3>1. Overview</h3>
-
-            <p>BeatForge allows up to 64 tracks, each with a 16-step sequencer per bar. Supports multiple bars. Modes include Sample (load audio files) and Synth (oscillator-based synthesis). Global FX bus for reverb or external routing. MIDI I/O support for external control/triggering.</p>
+            <p>Up to 64 tracks with 16-step sequencing per bar, supporting multiple bars. Modes for samples or synthesis, plus global FX and MIDI I/O.</p>
 
             <h3>2. Installation</h3>
-
             <ul>
-
-                <li>Download the plugin from the link above.</li>
-
-                <li>Mac: use the .pkg installer</li>
-
-                <li>Windows: put the VST3 in your VST3 folder (usually C:\Program Files\Common Files\VST3\)</li>
-
-                <li>Scan for plugins in your DAW (e.g., Ableton, Logic, etc.).</li>
-
-                <li>On first launch, you'll see a trial/activation screen. Start a 14-day trial or purchase (10 € only for now) andactivate with email/code.</li>
-
+                <li>Download the plugin from above.</li>
+                <li>Mac: Use the .pkg installer.</li>
+                <li>Windows: Place VST3 in C:\Program Files\Common Files\VST3\.</li>
+                <li>Scan in your DAW and launch for trial or activation.</li>
             </ul>
 
             <h3>3. Interface Layout</h3>
-
-            <p>The main window is divided into:</p>
-
-            <ul>
-
-                <li><strong>Top Controls:</strong> Add Track, Track Selector Combo, Song Menu (Save/Load/New), FX Mode (External/Internal Reverb), Song Choice Combo.</li>
-
-                <li><strong>Bar Controls:</strong> Total Bars (+/-), Current Bar (+/-), Copy/Paste Bar.</li>
-
-                <li><strong>Tab Buttons:</strong> Mix, Time, ADSR, FX (Pitch/Dist/BitCrush), EQ, LFO, Synth - switches all tracks to the selected tab view.</li>
-
-                <li><strong>Track List:</strong> Scrollable list of tracks with labels, sample choice, solo/mute, 16-step buttons, and tabbed controls.</li>
-
-                <li><strong>Status Labels:</strong> Version, Sample Rate, Trial/Activation Status.</li>
-
-            </ul>
+            <p>Top controls for tracks and songs, bar navigation, global tabs (Mix, Time, ADSR, FX, EQ, LFO, Synth), scrollable track list, and status indicators.</p>
 
             <h3>4. Track Management</h3>
-
             <ul>
-
-                <li><strong>Add Track:</strong> Click "Add Track" to create a new track (up to 64).</li>
-
-                <li><strong>Select Track:</strong> Use the combo box or click track label (Cmd+Click for multi-select).</li>
-
-                <li><strong>Delete Track:</strong> Right-click track label > Track Operations > Delete Track.</li>
-
-                <li><strong>Track Label:</strong> Editable name. Right-click for context menu (outputs, MIDI, modes, etc.).</li>
-
-                <li><strong>Solo/Mute:</strong> Toggle buttons. Solo overrides mute.</li>
-
-                <li><strong>Sample Choice:</strong> Combo for loading samples. "Load Sample..." opens file chooser. Supports WAV/MP3/AIFF. Drag-drop files onto tracks.</li>
-
-                <li><strong>Random Sample Mode:</strong> Right-click label > Random Sample Mode. Loads random samples from folder on trigger.</li>
-
-                <li><strong>Mode Switching:</strong> Right-click label > Mode > Sample/Synth. Sample: audio files; Synth: oscillator-based (Sine/Saw/Triangle/Square/Noise).</li>
-
+                <li>Add tracks (up to 64).</li>
+                <li>Select via combo or click (Cmd+Click for multi).</li>
+                <li>Edit labels, solo/mute, load samples, or switch to Synth mode.</li>
+                <li>Random Sample Mode for variety.</li>
             </ul>
 
             <h3>5. Sequencer</h3>
-
             <ul>
-
-                <li><strong>Steps:</strong> 16 toggle buttons per bar. Click to enable/disable hits.</li>
-
-                <li><strong>Right-Click Step:</strong> Menu for Chance (5-100%), Group (1-32 for parameter groups), Group Settings (Copy/Paste), Roll (1-16 flam/rolls).</li>
-
-                <li><strong>Hit Chance:</strong> Probability of trigger (visualized on button LED: magenta if <100%).</li>
-
-                <li><strong>Edit Groups:</strong> Assign steps to groups (1-32) for per-group params (volume, pitch, etc.). Current group highlighted.</li>
-
-                <li><strong>Roll/Flam:</strong> Set divisions (1-16) for rapid repeats. Visualized as pie slices on button LED.</li>
-
-                <li><strong>Multi-Select Steps:</strong> Cmd+Click to select multiple; apply changes to all.</li>
-
-                <li><strong>Bar Navigation:</strong> Change total/current bars. Copy/Paste bars (single track or all).</li>
-
-                <li><strong>Playback:</strong> Syncs to host transport. Flashing highlights current step.</li>
-
+                <li>16 steps per bar; right-click for Chance, Groups, Rolls.</li>
+                <li>Multi-select steps; copy/paste bars.</li>
+                <li>Syncs to host transport.</li>
             </ul>
 
-            <h3>6. Tabbed Controls (Per-Track, Synced Globally)</h3>
-
-            <p>Click tab buttons to switch views for all tracks.</p>
-
+            <h3>6. Tabbed Controls (Per-Track)</h3>
+            <p>Params apply per edit group for precision.</p>
             <ul>
-
-                <li><strong>Mix:</strong> Volume (-60 to +12 dB), Pan (L/R), FX Send (-112 to +12 dB), Phase Invert (toggle).</li>
-
-                <li><strong>Time:</strong> Swing (50-75%), Nudge (-50 to +50 ms offset), Reverse (toggle + Trim 0-16 steps).</li>
-
-                <li><strong>ADSR:</strong> Attack (0-0.02 s), Decay (0.01-1000 ms), Sustain (0-1), Release (1-2000 ms).</li>
-
-                <li><strong>FX:</strong> Pitch (-12 to +12 semitones), Distortion (0-30 dB drive; right-click for types: Soft/Hard/Foldback/Hardcore), BitCrush (2-16 bits; "Off" at 16).</li>
-
-                <li><strong>EQ:</strong> HP (toggle + 20-20k Hz cutoff), LP (toggle + 20-20k Hz cutoff).</li>
-
-                <li><strong>LFO (3x):</strong> Enable (toggle), Freq (0.1-20 Hz or Per Beat; right-click for mode/type/targets), Amp (0-100%). Right-click Freq: Mode (Hz/Per Beat), Type (Sine/Square/Saw/Triangle/Noise), Targets (multi-select: Audio/Volume/Pan/Pitch/Dist/FX Send/HP/LP/Attack/Decay/Sustain/Release).</li>
-
-                <li><strong>Synth:</strong> Base Freq (20-100 Hz), Osc Type (combo: Sine/Saw/Triangle/Square/Noise), Pitch Drop (0-48 semitones), Drop Rate (1-2000 ms), KeyTrack (toggle MIDI note tracking).</li>
-
+                <li><strong>Mix:</strong> Volume, Pan, FX Send, Phase Invert.</li>
+                <li><strong>Time:</strong> Swing, Nudge, Reverse.</li>
+                <li><strong>ADSR:</strong> Attack, Decay, Sustain, Release.</li>
+                <li><strong>FX:</strong> Pitch, Distortion (types), BitCrush.</li>
+                <li><strong>EQ:</strong> HP/LP filters.</li>
+                <li><strong>LFO (3x):</strong> Freq, Amp, Types, Targets.</li>
+                <li><strong>Synth:</strong> Base Freq, Osc Type, Pitch Drop, KeyTrack.</li>
             </ul>
-
-            <p><strong>Note:</strong> Params are per-edit-group. Changes apply to current group.</p>
 
             <h3>7. Global Features</h3>
-
             <ul>
-
-                <li><strong>Song Management:</strong> Save/Save As/Load/New. Songs stored as .drsong files (JSON-like with params/samples).</li>
-
-                <li><strong>FX Mode:</strong> External Output (select bus) or Internal Reverb (load IR WAV/AIFF, return level 0-1).</li>
-
-                <li><strong>Mute Groups:</strong> Right-click label > Mute Group (1-8 or None). Triggers mute others in group.</li>
-
-                <li><strong>MIDI:</strong> Right-click label > MIDI > Note (None or 0-127), Channel (None or 1-16), Direction (Input/Output), Synth Roll Mode (toggle for sustained synth notes).</li>
-
-                <li><strong>Outputs:</strong> Right-click label > Output Settings > Main/Aux buses.</li>
-
+                <li>Song save/load as .drsong files.</li>
+                <li>FX Mode: Internal Reverb or external.</li>
+                <li>Mute Groups; MIDI Note/Channel.</li>
+                <li>Output routing.</li>
             </ul>
 
             <h3>8. Advanced Usage</h3>
-
             <ul>
-
-                <li><strong>Multi-Track Select:</strong> Cmd+Click labels. Changes apply to all (e.g., step toggles).</li>
-
-                <li><strong>Clear Hit Chances:</strong> Right-click label > Bar Operations > Clear Hit Chances.</li>
-
-                <li><strong>Synth Mode:</strong> No sample needed. Triggers oscillators with ADSR/Pitch Drop/KeyTrack.</li>
-
-                <li><strong>BitCrush:</strong> Reduce for lo-fi effects. Precomputed for performance.</li>
-
-                <li><strong>LFO Targets:</strong> Modulate multiple params. White Noise for random modulation.</li>
-
-                <li><strong>Reverb IR:</strong> Load custom impulse responses for internal FX.</li>
-
-                <li><strong>Synth Roll Mode:</strong> Enable via right-click on track label > MIDI > Synth Roll Mode (toggle). When active and in Synth mode, incoming MIDI notes trigger sustained oscillator playback (like a synth note hold). Use MIDI note-on to start the roll (continuous sound at the note's frequency), note-off to stop. Adjust roll frequency via Base Freq or KeyTrack. Useful for melodic synth lines or drones on drum tracks.</li>
-
-                <li><strong>KeyTrack:</strong> In Synth tab, toggle KeyTrack on. When enabled, incoming MIDI notes override Base Freq, mapping the note to its Hertz value (e.g., A4=440Hz). Without KeyTrack, all triggers use fixed Base Freq. Combine with Synth Roll Mode for polyphonic MIDI synth control. Pitch Shift still applies offset.</li>
-
+                <li>Multi-track edits; Clear Chances.</li>
+                <li>Synth Roll Mode for sustained notes.</li>
+                <li>LFO for random modulation; Custom IRs.</li>
             </ul>
 
             <h3>9. Troubleshooting</h3>
-
             <ul>
-
-                <li><strong>No Sound:</strong> Check mute/solo, output bus, sample loaded, host playing.</li>
-
-                <li><strong>Trial Expired:</strong> Purchase/activate via email/code.</li>
-
-                <li><strong>High CPU:</strong> Reduce tracks/bars, disable unused LFOs/FX.</li>
-
-                <li><strong>Contact:</strong> For issues, email beatforgehelp@gmail.com.</li>
-
+                <li>No sound: Check mutes, samples, playback.</li>
+                <li>Trial: Activate via email/code.</li>
+                <li>CPU: Optimize tracks/LFOs.</li>
+                <li>Contact: beatforgehelp@gmail.com.</li>
             </ul>
-
         </div>
-
     </div>
-
 </body>
-
 </html>
