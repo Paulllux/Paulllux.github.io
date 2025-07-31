@@ -1,166 +1,311 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>BeatForge - Download and Manual</title>
+
     <style>
+
         body {
+
             font-family: Arial, sans-serif;
+
             background-color: #1a1a1a;
+
             color: #e0e0e0;
+
             margin: 0;
+
             padding: 20px;
+
             line-height: 1.6;
+
         }
+
         h1, h2, h3 {
+
             color: #64c8c8; /* Neon cyan */
+
         }
+
         a {
+
             color: #ff00ff; /* Magenta */
+
             text-decoration: none;
+
         }
+
         a:hover {
+
             text-decoration: underline;
+
         }
+
         .container {
+
             max-width: 1200px;
+
             margin: 0 auto;
+
         }
+
         .download-section {
+
             background-color: #2a2a2a;
+
             padding: 20px;
+
             border-radius: 8px;
+
             margin-bottom: 40px;
+
         }
+
         .manual-section {
+
             background-color: #2a2a2a;
+
             padding: 20px;
+
             border-radius: 8px;
+
         }
+
         ul {
+
             list-style-type: disc;
+
             margin-left: 20px;
+
         }
+
         code {
+
             background-color: #3a3a3a;
+
             padding: 2px 4px;
+
             border-radius: 4px;
+
         }
+
         pre {
+
             background-color: #3a3a3a;
+
             padding: 10px;
+
             border-radius: 4px;
+
             overflow-x: auto;
+
         }
+
     </style>
+
 </head>
+
 <body>
+
     <div class="container">
+
         <h1>BeatForge - Drum Machine & Sequencer Plugin</h1>
-        <p>BeatForge is a powerful JUCE-based audio plugin for creating drum patterns, sequencing, and sound design. It supports sample loading, synthesis, multi-track sequencing, effects, LFO modulation, and more. Available as a VST3/AU plugin for Mac and Windows.</p>
+
+        <p>BeatForge is a powerful audio plugin for creating drum patterns, sequencing, and sound design. It supports sample loading, synthesis, multi-track sequencing, effects, LFO modulation, and more. Available as a VST3/AU plugin for Mac and Windows.</p>
 
         <div class="download-section">
+
             <h2>Download</h2>
+
             <p>Click the link below to download the latest version of BeatForge.</p>
+
             <ul>
+
                 <li><a href="https://drive.google.com/file/d/1E3xx41f-0YrGG2kCeyOZq_uh9eTuQ499/view?usp=share_link" target="_blank">Mac Version</li>
+
                 <li><a href="https://drive.google.com/file/d/1XBecnuby7uCH3lL8vL-LbgsDyQu0fsfD/view?usp=share_link" target="_blank">Windows Version</li>
+
             </ul>
-            <p><strong>Note:</strong> This is a trial version with a 14-day trial period. Activation requires an email and code (contact support for purchase/activation). Ensure your DAW supports VST3/AU plugins.</p>
+
+            <p><strong>Note:</strong> This is a trial version with a 14-day trial period. Activation requires an email and code (click the purchase button). </p>
+
         </div>
 
         <div class="manual-section">
+
             <h2>User Manual</h2>
-            <p>This manual is based on a thorough analysis of the plugin's source code. BeatForge is a multi-track drum sequencer with advanced features for sound manipulation and performance.</p>
+
+       
 
             <h3>1. Overview</h3>
-            <p>BeatForge allows up to 64 tracks, each with a 16-step sequencer per bar. Supports multiple bars (up to configurable total). Modes include Sample (load audio files) and Synth (oscillator-based synthesis). Global FX bus for reverb or external routing. MIDI I/O support for external control/triggering.</p>
+
+            <p>BeatForge allows up to 64 tracks, each with a 16-step sequencer per bar. Supports multiple bars. Modes include Sample (load audio files) and Synth (oscillator-based synthesis). Global FX bus for reverb or external routing. MIDI I/O support for external control/triggering.</p>
 
             <h3>2. Installation</h3>
+
             <ul>
+
                 <li>Download the plugin from the link above.</li>
-                <li>Extract the ZIP and place the .vst3/.component file in your DAW's plugin folder (e.g., ~/Library/Audio/Plug-Ins/Components/ on macOS).</li>
+
+                <li>Mac: use the .pkg installer</li>
+
+                <li>Windows: put the VST3 in your VST3 folder (usually C:\Program Files\Common Files\VST3\)</li>
+
                 <li>Scan for plugins in your DAW (e.g., Ableton, Logic, etc.).</li>
-                <li>On first launch, you'll see a trial/activation screen. Start a 14-day trial or activate with email/code.</li>
+
+                <li>On first launch, you'll see a trial/activation screen. Start a 14-day trial or purchase (10 € only for now) andactivate with email/code.</li>
+
             </ul>
 
             <h3>3. Interface Layout</h3>
+
             <p>The main window is divided into:</p>
+
             <ul>
+
                 <li><strong>Top Controls:</strong> Add Track, Track Selector Combo, Song Menu (Save/Load/New), FX Mode (External/Internal Reverb), Song Choice Combo.</li>
+
                 <li><strong>Bar Controls:</strong> Total Bars (+/-), Current Bar (+/-), Copy/Paste Bar.</li>
+
                 <li><strong>Tab Buttons:</strong> Mix, Time, ADSR, FX (Pitch/Dist/BitCrush), EQ, LFO, Synth - switches all tracks to the selected tab view.</li>
+
                 <li><strong>Track List:</strong> Scrollable list of tracks with labels, sample choice, solo/mute, 16-step buttons, and tabbed controls.</li>
+
                 <li><strong>Status Labels:</strong> Version, Sample Rate, Trial/Activation Status.</li>
+
             </ul>
 
             <h3>4. Track Management</h3>
+
             <ul>
+
                 <li><strong>Add Track:</strong> Click "Add Track" to create a new track (up to 64).</li>
+
                 <li><strong>Select Track:</strong> Use the combo box or click track label (Cmd+Click for multi-select).</li>
+
                 <li><strong>Delete Track:</strong> Right-click track label > Track Operations > Delete Track.</li>
+
                 <li><strong>Track Label:</strong> Editable name. Right-click for context menu (outputs, MIDI, modes, etc.).</li>
+
                 <li><strong>Solo/Mute:</strong> Toggle buttons. Solo overrides mute.</li>
+
                 <li><strong>Sample Choice:</strong> Combo for loading samples. "Load Sample..." opens file chooser. Supports WAV/MP3/AIFF. Drag-drop files onto tracks.</li>
+
                 <li><strong>Random Sample Mode:</strong> Right-click label > Random Sample Mode. Loads random samples from folder on trigger.</li>
+
                 <li><strong>Mode Switching:</strong> Right-click label > Mode > Sample/Synth. Sample: audio files; Synth: oscillator-based (Sine/Saw/Triangle/Square/Noise).</li>
+
             </ul>
 
             <h3>5. Sequencer</h3>
+
             <ul>
+
                 <li><strong>Steps:</strong> 16 toggle buttons per bar. Click to enable/disable hits.</li>
+
                 <li><strong>Right-Click Step:</strong> Menu for Chance (5-100%), Group (1-32 for parameter groups), Group Settings (Copy/Paste), Roll (1-16 flam/rolls).</li>
+
                 <li><strong>Hit Chance:</strong> Probability of trigger (visualized on button LED: magenta if <100%).</li>
+
                 <li><strong>Edit Groups:</strong> Assign steps to groups (1-32) for per-group params (volume, pitch, etc.). Current group highlighted.</li>
+
                 <li><strong>Roll/Flam:</strong> Set divisions (1-16) for rapid repeats. Visualized as pie slices on button LED.</li>
+
                 <li><strong>Multi-Select Steps:</strong> Cmd+Click to select multiple; apply changes to all.</li>
+
                 <li><strong>Bar Navigation:</strong> Change total/current bars. Copy/Paste bars (single track or all).</li>
+
                 <li><strong>Playback:</strong> Syncs to host transport. Flashing highlights current step.</li>
+
             </ul>
 
             <h3>6. Tabbed Controls (Per-Track, Synced Globally)</h3>
+
             <p>Click tab buttons to switch views for all tracks.</p>
+
             <ul>
+
                 <li><strong>Mix:</strong> Volume (-60 to +12 dB), Pan (L/R), FX Send (-112 to +12 dB), Phase Invert (toggle).</li>
+
                 <li><strong>Time:</strong> Swing (50-75%), Nudge (-50 to +50 ms offset), Reverse (toggle + Trim 0-16 steps).</li>
+
                 <li><strong>ADSR:</strong> Attack (0-0.02 s), Decay (0.01-1000 ms), Sustain (0-1), Release (1-2000 ms).</li>
+
                 <li><strong>FX:</strong> Pitch (-12 to +12 semitones), Distortion (0-30 dB drive; right-click for types: Soft/Hard/Foldback/Hardcore), BitCrush (2-16 bits; "Off" at 16).</li>
+
                 <li><strong>EQ:</strong> HP (toggle + 20-20k Hz cutoff), LP (toggle + 20-20k Hz cutoff).</li>
+
                 <li><strong>LFO (3x):</strong> Enable (toggle), Freq (0.1-20 Hz or Per Beat; right-click for mode/type/targets), Amp (0-100%). Right-click Freq: Mode (Hz/Per Beat), Type (Sine/Square/Saw/Triangle/Noise), Targets (multi-select: Audio/Volume/Pan/Pitch/Dist/FX Send/HP/LP/Attack/Decay/Sustain/Release).</li>
+
                 <li><strong>Synth:</strong> Base Freq (20-100 Hz), Osc Type (combo: Sine/Saw/Triangle/Square/Noise), Pitch Drop (0-48 semitones), Drop Rate (1-2000 ms), KeyTrack (toggle MIDI note tracking).</li>
+
             </ul>
+
             <p><strong>Note:</strong> Params are per-edit-group. Changes apply to current group.</p>
 
             <h3>7. Global Features</h3>
+
             <ul>
+
                 <li><strong>Song Management:</strong> Save/Save As/Load/New. Songs stored as .drsong files (JSON-like with params/samples).</li>
+
                 <li><strong>FX Mode:</strong> External Output (select bus) or Internal Reverb (load IR WAV/AIFF, return level 0-1).</li>
+
                 <li><strong>Mute Groups:</strong> Right-click label > Mute Group (1-8 or None). Triggers mute others in group.</li>
+
                 <li><strong>MIDI:</strong> Right-click label > MIDI > Note (None or 0-127), Channel (None or 1-16), Direction (Input/Output), Synth Roll Mode (toggle for sustained synth notes).</li>
+
                 <li><strong>Outputs:</strong> Right-click label > Output Settings > Main/Aux buses.</li>
+
             </ul>
 
             <h3>8. Advanced Usage</h3>
+
             <ul>
+
                 <li><strong>Multi-Track Select:</strong> Cmd+Click labels. Changes apply to all (e.g., step toggles).</li>
+
                 <li><strong>Clear Hit Chances:</strong> Right-click label > Bar Operations > Clear Hit Chances.</li>
+
                 <li><strong>Synth Mode:</strong> No sample needed. Triggers oscillators with ADSR/Pitch Drop/KeyTrack.</li>
-                <li><strong>BitCrush/Sample Rate:</strong> Reduce for lo-fi effects. Precomputed for performance.</li>
+
+                <li><strong>BitCrush:</strong> Reduce for lo-fi effects. Precomputed for performance.</li>
+
                 <li><strong>LFO Targets:</strong> Modulate multiple params. White Noise for random modulation.</li>
+
                 <li><strong>Reverb IR:</strong> Load custom impulse responses for internal FX.</li>
+
+                <li><strong>Synth Roll Mode:</strong> Enable via right-click on track label > MIDI > Synth Roll Mode (toggle). When active and in Synth mode, incoming MIDI notes trigger sustained oscillator playback (like a synth note hold). Use MIDI note-on to start the roll (continuous sound at the note's frequency), note-off to stop. Adjust roll frequency via Base Freq or KeyTrack. Useful for melodic synth lines or drones on drum tracks.</li>
+
+                <li><strong>KeyTrack:</strong> In Synth tab, toggle KeyTrack on. When enabled, incoming MIDI notes override Base Freq, mapping the note to its Hertz value (e.g., A4=440Hz). Without KeyTrack, all triggers use fixed Base Freq. Combine with Synth Roll Mode for polyphonic MIDI synth control. Pitch Shift still applies offset.</li>
+
             </ul>
 
             <h3>9. Troubleshooting</h3>
+
             <ul>
+
                 <li><strong>No Sound:</strong> Check mute/solo, output bus, sample loaded, host playing.</li>
+
                 <li><strong>Trial Expired:</strong> Purchase/activate via email/code.</li>
+
                 <li><strong>High CPU:</strong> Reduce tracks/bars, disable unused LFOs/FX.</li>
-                <li><strong>Contact:</strong> For issues, email support@beatforge.com (placeholder).</li>
+
+                <li><strong>Contact:</strong> For issues, email beatforgehelp@gmail.com.</li>
+
             </ul>
 
-            <p><strong>Version:</strong> Based on code as of July 31, 2025. Updates may add features.</p>
         </div>
+
     </div>
+
 </body>
+
 </html>
