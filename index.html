@@ -12,11 +12,12 @@
             color: #e0e0e0;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
         }
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             color: #00ffff; /* Vibrant cyan for headlines */
+            letter-spacing: 0.5px;
         }
         a {
             color: #ff00ff; /* Magenta for links */
@@ -32,7 +33,7 @@
             padding: 40px 20px;
         }
         .hero {
-            background: linear-gradient(135deg, rgba(18,18,18,0.7), rgba(42,42,42,0.7)), url('images/Screenshot 2025-07-31 at 09.14.07.png');
+            background: linear-gradient(135deg, rgba(18,18,18,0.85), rgba(42,42,42,0.85)), url('https://placehold.co/1920x1080/000000/2a2a2a?text=BeatForge');
             background-size: cover;
             background-position: center;
             text-align: center;
@@ -41,8 +42,9 @@
             box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
         }
         .hero h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
         }
         .hero p {
             font-size: 1.1em;
@@ -66,56 +68,91 @@
         }
         .section {
             background-color: #1e1e1e;
-            padding: 30px;
+            padding: 40px;
             border-radius: 12px;
             margin-bottom: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         }
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
         .feature-item {
             background-color: #2a2a2a;
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 3px solid #00ffff;
         }
         .feature-item:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
         }
         .feature-item h3 {
+            margin-top: 0;
             margin-bottom: 10px;
+            color: #e0e0e0;
         }
         .download-section ul {
             list-style-type: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
         }
-        .download-section li {
-            margin: 10px 0;
-        }
-        .download-section a {
+        .download-section li a {
             background-color: #00ffff;
             color: #121212;
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: 600;
+            transition: background-color 0.3s ease;
         }
-        .download-section a:hover {
+        .download-section li a:hover {
             background-color: #00cccc;
         }
-        pre {
-            background-color: #3a3a3a;
-            padding: 15px;
-            border-radius: 8px;
-            overflow-x: auto;
+        
+        /* Manual Specific Styles */
+        .manual-section h3 {
+            margin-top: 40px;
+            border-bottom: 2px solid #00ffff;
+            padding-bottom: 10px;
+            font-size: 1.8em;
+        }
+        .manual-section h4 {
+            color: #ff00ff;
+            margin-top: 30px;
+            font-size: 1.4em;
+        }
+        .manual-section ul, .manual-section ol {
+            padding-left: 25px;
+        }
+        .manual-section li {
+            margin-bottom: 12px;
+        }
+        .manual-section ul ul {
+            margin-top: 10px;
+        }
+        .manual-section strong {
+            color: #00ffff;
         }
         code {
             background-color: #3a3a3a;
-            padding: 4px 8px;
+            padding: 3px 7px;
             border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            color: #ff69b4;
+        }
+        .key-combo {
+            background-color: #4f4f4f;
+            border: 1px solid #666;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #e0e0e0;
         }
     </style>
 </head>
@@ -129,113 +166,197 @@
     <div class="container">
         <div class="section">
             <h2>Key Features</h2>
-            <p>Designed to offer straightforward workflow inspired by vintage drum machines, enhanced with contemporary tools for today's producers.</p>
+            <p>Designed to offer a straightforward, hardware-inspired workflow, enhanced with deep sound-shaping tools for today's producers.</p>
             <div class="features-grid">
                 <div class="feature-item">
-                    <h3>Up to 64 Tracks</h3>
-                    <p>Multi-bar sequencing for building detailed patterns.</p>
+                    <h3>Hybrid Sound Engine</h3>
+                    <p>Each of the 64 tracks can operate in <strong>Sample Mode</strong> to play your audio files or <strong>Synth Mode</strong> using a built-in oscillator.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Sample & Synth Modes</h3>
-                    <p>Load audio files or use oscillators for sound creation.</p>
+                    <h3>Advanced Sequencing</h3>
+                    <p>Multi-bar patterns with per-step <strong>Probability</strong>, <strong>Rolls/Flams</strong> (up to 16 hits), and parameter automation using <strong>Edit Groups</strong>.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>LFO Modulation</h3>
-                    <p>Three LFOs per track for dynamic parameter control.</p>
+                    <h3>Deep Modulation</h3>
+                    <p>Three flexible LFOs per track can target over ten parameters, including pitch, filters, volume, and ADSR envelopes.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Effects & EQ</h3>
-                    <p>Pitch, distortion, bitcrush, filters, and global reverb.</p>
+                    <h3>Powerful Sample Editing</h3>
+                    <p>Visual waveform display with sample slicing, time-stretching, and two distinct pitch-shifting algorithms: <strong>TimeStretch</strong> and <strong>Resample</strong>.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>MIDI Integration</h3>
-                    <p>Input/output support for external triggering and control.</p>
+                    <h3>Full Effects Suite</h3>
+                    <p>Includes per-track Pitch Shifting, four Distortion types, Bit/Sample Rate Reduction, Phaser, HP/LP Filters, and a global Reverb with custom IR support.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Probability & Rolls</h3>
-                    <p>Add chance and flam effects for varied rhythms.</p>
+                    <h3>Comprehensive I/O</h3>
+                    <p>Full MIDI control (Input & Output), multiple audio outputs for routing tracks in your DAW, and Mute Groups for classic drum machine choking effects.</p>
                 </div>
             </div>
         </div>
 
         <div id="download" class="section download-section">
             <h2>Download</h2>
-            <p>Try the 14-day trial version. Activation available for full access (10€ introductory price).</p>
+            <p>Try the fully-featured 14-day trial. Activation is available for lifetime access (10€ introductory price).</p>
             <ul>
-        <li><a href="https://github.com/Paulllux/BeatForge/releases/download/V.1.4.1/BeatForge.dmg">Download Mac Version</a></li>
-        <li><a href="https://github.com/Paulllux/BeatForge/releases/download/V.1.4.1/BeatForge_Installer.zip">Download Windows Version</a></li>
-    </ul>
+                <li><a href="https://github.com/Paulllux/BeatForge/releases/download/V.1.4.1/BeatForge.dmg" target="_blank">Mac Version (VST3/AU)</a></li>
+                <li><a href="https://github.com/Paulllux/BeatForge/releases/download/V.1.4.1/BeatForge_Installer.zip" target="_blank">Windows Version (VST3)</a></li>
+            </ul>
             <a href="#manual" class="cta-button">View Manual</a>
         </div>
 
         <div id="manual" class="section manual-section">
             <h2>User Manual</h2>
-            <p>This guide covers installation, interface, and features to help you get started with BeatForge's intuitive design.</p>
+            <p>This comprehensive guide covers installation, the user interface, and all features in detail to help you master BeatForge.</p>
 
-            <h3>1. Overview</h3>
-            <p>Up to 64 tracks with 16-step sequencing per bar, supporting multiple bars. Modes for samples or synthesis, plus global FX and MIDI I/O.</p>
-
-            <h3>2. Installation</h3>
+            <h3>1. Installation & Activation</h3>
+            <p>BeatForge runs a 14-day fully functional trial. After the trial, you will need to purchase and activate the plugin to continue using it.</p>
             <ul>
-                <li>Download the plugin from above.</li>
-                <li>Mac: Use the .pkg installer.</li>
-                <li>Windows: Place VST3 in C:\Program Files\Common Files\VST3\.</li>
-                <li>Scan in your DAW and launch for trial or activation.</li>
+                <li><strong>Mac:</strong> Open the downloaded <code>.dmg</code> file. Drag the <strong>BeatForge</strong> application to your Applications folder. Then, run the <code>.pkg</code> installer inside the DMG to install the VST3 and AU plugins.</li>
+                <li><strong>Windows:</strong> Run the installer from the downloaded <code>.zip</code> file. You will be given the option to install the standalone application and the VST3 plugin.</li>
+                <li>After installation, open your DAW and rescan for new plugins. The first time you open BeatForge, you will see a welcome screen.</li>
+                <li><strong>Trial:</strong> Click "Start Trial" to begin your 14-day evaluation.</li>
+                <li><strong>Activation:</strong> To activate, enter the email you used for purchase and the activation code you received into the corresponding fields and click "Activate".</li>
             </ul>
 
-            <h3>3. Interface Layout</h3>
-            <p>Top controls for tracks and songs, bar navigation, global tabs (Mix, Time, ADSR, FX, EQ, LFO, Synth), scrollable track list, and status indicators.</p>
-
-            <h3>4. Track Management</h3>
+            <h3>2. Core Concepts</h3>
             <ul>
-                <li>Add tracks (up to 64).</li>
-                <li>Select via combo or click (Cmd+Click for multi).</li>
-                <li>Edit labels, solo/mute, load samples, or switch to Synth mode.</li>
-                <li>Random Sample Mode for variety.</li>
+                <li><strong>Tracks:</strong> The plugin supports up to 64 tracks. Each track is an independent instrument that can be a sampler or a synth.</li>
+                <li><strong>The Sequencer:</strong> Each track has a 16-step sequencer. You can create patterns that span multiple bars, which are chained together to form your complete sequence.</li>
+                <li><strong>Edit Groups:</strong> This is a powerful feature that lets you have different sound settings for different steps on the <em>same track</em>. Each step is assigned to one of 32 Edit Groups. When you adjust a parameter in a tab (like Pitch or ADSR), you are only editing the currently selected Edit Group. This allows for intricate per-step automation.</li>
             </ul>
 
-            <h3>5. Sequencer</h3>
+            <h3>3. Interface Guide</h3>
+
+            <h4>Top Control Bar</h4>
             <ul>
-                <li>16 steps per bar; right-click for Chance, Groups, Rolls.</li>
-                <li>Multi-select steps; copy/paste bars.</li>
-                <li>Syncs to host transport.</li>
+                <li><strong>Add Track:</strong> Adds a new, empty track to your session.</li>
+                <li><strong>Track Selector Dropdown:</strong> Quickly select a track to focus on for detailed editing.</li>
+                <li><strong>Song Menu:</strong> Save/Load your entire session (all tracks, patterns, and settings) as a <code>.drsong</code> file. Also allows loading from a list of songs in the current directory.</li>
+                <li><strong>FX Mode:</strong> Toggles the global FX bus between <strong>Internal Reverb</strong> (using a built-in convolution reverb) and <strong>External Output</strong> (sending the FX bus to a dedicated stereo output pair in your DAW).</li>
+                <li><strong>Bar Navigation:</strong> Use the "+" and "-" buttons to change the total number of bars in your sequence and to navigate between the current bars for editing.</li>
+                <li><strong>Copy/Paste:</strong> Copy the pattern of the current bar and paste it to another.</li>
             </ul>
 
-            <h3>6. Tabbed Controls (Per-Track)</h3>
-            <p>Params apply per edit group for precision.</p>
+            <h4>Track Area & Sequencer</h4>
             <ul>
-                <li><strong>Mix:</strong> Volume, Pan, FX Send, Phase Invert.</li>
-                <li><strong>Time:</strong> Swing, Nudge, Reverse.</li>
-                <li><strong>ADSR:</strong> Attack, Decay, Sustain, Release.</li>
-                <li><strong>FX:</strong> Pitch, Distortion (types), BitCrush.</li>
-                <li><strong>EQ:</strong> HP/LP filters.</li>
-                <li><strong>LFO (3x):</strong> Freq, Amp, Types, Targets.</li>
-                <li><strong>Synth:</strong> Base Freq, Osc Type, Pitch Drop, KeyTrack.</li>
+                <li><strong>Track Label:</strong> Displays the track name. Left-click to select a track. Right-click to open a context menu with advanced options (Delete Track, Mute Groups, MIDI I/O, etc.).</li>
+                <li><strong>Sample/Synth Selector:</strong> A dropdown menu that shows the loaded sample. Click it to load a new sample or switch the track to <strong>Synth Mode</strong>.</li>
+                <li><strong>S/M Buttons:</strong> Solo or Mute the track.</li>
+                <li><strong>Step Buttons (1-16):</strong> Click a button to activate a step. The color corresponds to its assigned Edit Group.
+                    <ul>
+                        <li><span class="key-combo">Left-Click</span>: Toggles the step on or off.</li>
+                        <li><span class="key-combo">Shift + Click</span>: Selects multiple steps for batch editing. Toggling one selected step will toggle all others in the selection.</li>
+                        <li><span class="key-combo">Right-Click</span>: Opens a menu to change the step's <strong>Chance</strong> (probability of triggering), assign it to a new <strong>Edit Group</strong>, or set a <strong>Roll/Flam</strong> (from 1 to 16 sub-hits within the step).</li>
+                    </ul>
+                </li>
             </ul>
 
-            <h3>7. Global Features</h3>
+            <h4>Waveform Display & Pianoroll</h4>
+            <p>The editor features two distinct areas for interacting with your sound: the Waveform Display (top) and the Pianoroll (bottom).</p>
             <ul>
-                <li>Song save/load as .drsong files.</li>
-                <li>FX Mode: Internal Reverb or external.</li>
-                <li>Mute Groups; MIDI Note/Channel.</li>
-                <li>Output routing.</li>
+                <li>
+                    <strong>Waveform Display:</strong> This area appears above the track list <em>only when a single track in Sample Mode is selected</em>. It allows for detailed sample editing:
+                    <ul>
+                        <li><strong>Slicing & Resizing:</strong> Click and drag in the <strong>bottom portion</strong> of the waveform, or drag the handles at the edges of a selection, to define the start and end points of the sample slice that will be played by the current Edit Group.</li>
+                        <li><strong>Dragging & Duplicating:</strong> Click and drag from the <strong>top portion</strong> of a highlighted slice to drag-and-drop it. Dropping it on another track will replace that track's sample and settings. Dropping it on an empty area below the track list will create a new, duplicated track with that exact slice.</li>
+                        <li>Use the <strong>Snap/Grid Toggles</strong> for precise, tempo-synced slicing.</li>
+                        <li>Set the sample's original <strong>BPM</strong> for accurate time-stretching and its root <strong>Base Note</strong> for Keytracking.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Pianoroll:</strong> Located at the bottom of the plugin window, the pianoroll is always available to play the currently selected track, whether it's in <strong>Sample Mode</strong> or <strong>Synth Mode</strong>. In Sample Mode with Keytracking enabled, it highlights the playable pitch range of the sample.
+                </li>
+            </ul>
+            
+            <h3>4. Detailed Feature Breakdown (The Tabs)</h3>
+            <p>These tabs contain the sound-shaping parameters. Remember, all changes apply only to the <strong>currently selected Edit Group</strong> on the selected track(s).</p>
+
+            <h4><strong>Mix Tab</strong></h4>
+            <ul>
+                <li><strong>Volume:</strong> Sets the track's volume (-60dB to +12dB).</li>
+                <li><strong>Pan:</strong> Controls the stereo position.</li>
+                <li><strong>FX Send:</strong> The amount of signal sent to the global FX bus.</li>
+                <li><strong>Phase:</strong> Inverts the phase of the audio signal.</li>
             </ul>
 
-            <h3>8. Advanced Usage</h3>
+            <h4><strong>Time Tab</strong></h4>
             <ul>
-                <li>Multi-track edits; Clear Chances.</li>
-                <li>Synth Roll Mode for sustained notes.</li>
-                <li>LFO for random modulation; Custom IRs.</li>
+                <li><strong>Swing:</strong> Applies a global swing timing (50% to 75%). It delays every second 16th note in the bar.</li>
+                <li><strong>Nudge (Micro Timing):</strong> Shifts the timing of a step forward or backward by up to 50ms for fine-tuning the groove.</li>
             </ul>
 
-            <h3>9. Troubleshooting</h3>
+            <h4><strong>ADSR Tab</strong></h4>
+            <p>Controls the standard amplitude envelope for the sound.</p>
             <ul>
-                <li>No sound: Check mutes, samples, playback.</li>
-                <li>Trial: Activate via email/code.</li>
-                <li>CPU: Optimize tracks/LFOs.</li>
-                <li>Contact: beatforgehelp@gmail.com.</li>
+                <li><strong>Attack:</strong> Fade-in time (0-20ms).</li>
+                <li><strong>Decay:</strong> Time to reach the Sustain level (0.01-1000ms).</li>
+                <li><strong>Sustain:</strong> The level maintained while a note is held (0-100%).</li>
+                <li><strong>Release:</strong> Fade-out time after the note ends (1-2000ms).</li>
+            </ul>
+
+            <h4><strong>FX Tab</strong></h4>
+            <ul>
+                <li><strong>Pitch:</strong> Adjusts the pitch from -12 to +12 semitones. <span class="key-combo">Right-Click</span> to choose the algorithm:
+                    <ul>
+                        <li><code>Resample</code>: Classic sampler-style pitch shifting where speed changes with pitch.</li>
+                        <li><code>TimeStretch</code>: Modern algorithm that changes pitch while preserving the sample's length and timing.</li>
+                    </ul>
+                </li>
+                <li><strong>KeyTrk:</strong> Toggles Keytracking. When on, the sample's pitch will follow incoming MIDI notes, based on the <strong>Base Note</strong> set in the waveform view. The playable range is +/- 3 octaves.</li>
+                <li><strong>Distortion:</strong> Adds drive. <span class="key-combo">Right-Click</span> to choose from four algorithms: <code>Soft</code>, <code>Hard</code>, <code>Foldback</code>, and <code>Hardcore</code>.</li>
+                <li><strong>BitCrush:</strong> Reduces the bit depth of the signal (from 16 down to 2 bits) for a lo-fi sound.</li>
+                <li><strong>Phaser Rate/Depth:</strong> Controls a built-in phaser effect.</li>
+            </ul>
+
+            <h4><strong>EQ Tab</strong></h4>
+            <ul>
+                <li><strong>HP/LP Toggles:</strong> Enable or disable the High-Pass and Low-Pass filters.</li>
+                <li><strong>HP/LP Cutoff:</strong> Sets the cutoff frequency for the respective filters (20Hz to 20kHz).</li>
+            </ul>
+
+            <h4><strong>LFO Tab</strong></h4>
+            <p>Each track has three independent Low-Frequency Oscillators for modulation.</p>
+            <ul>
+                <li><strong>Enable Toggle:</strong> Activates the LFO.</li>
+                <li><strong>Freq Slider:</strong> Sets the LFO speed. <span class="key-combo">Right-Click</span> to switch between <code>Hz</code> (free-running frequency) and <code>Per Beat</code> (synced to the project tempo).</li>
+                <li><strong>Amp Slider:</strong> Controls the overall depth of the modulation.</li>
+                <li><strong>Menus (Right-Click Freq Slider):</strong>
+                    <ul>
+                        <li><strong>Type:</strong> Choose the LFO shape: <code>Sine</code>, <code>Square</code>, <code>Sawtooth</code>, <code>Triangle</code>, or <code>White Noise</code>.</li>
+                        <li><strong>Targets:</strong> Choose what parameter(s) the LFO will modulate. You can select multiple targets, including Volume, Pan, Pitch, Filter Cutoffs, ADSR stages, and more.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4><strong>Synth Tab</strong></h4>
+            <p>These controls are active when a track is in <strong>Synth Mode</strong>.</p>
+            <ul>
+                <li><strong>Base Freq:</strong> Sets the fundamental frequency of the oscillator.</li>
+                <li><strong>Osc Type:</strong> Selects the oscillator waveform: <code>Sine</code>, <code>Saw</code>, <code>Triangle</code>, <code>Square</code>, or <code>Noise</code>.</li>
+                <li><strong>Pitch Drop / Drop Rate:</strong> Creates a pitch envelope, perfect for classic electronic drum sounds like kicks and toms.</li>
+            </ul>
+
+            <h3>5. Advanced Workflows & Context Menus</h3>
+            <p>Right-clicking on the track label reveals a powerful context menu:</p>
+            <ul>
+                <li><strong>Track Operations:</strong> Delete the track, clear its sample, or enable <strong>Random Sample Mode</strong>, which plays a random sample from the same folder on each trigger.</li>
+                <li><strong>Output Settings:</strong> Route the track's audio to different stereo outputs in your DAW.</li>
+                <li><strong>MIDI:</strong> Assign a MIDI note and channel for triggering the track. Enable <strong>MIDI Output</strong> to send the track's pattern out as MIDI data, so you can use BeatForge's powerful sequencer to trigger other plugins, external hardware drum machines, or synthesizers. Activate <strong>Synth Roll Mode</strong> to turn a sample into a playable pitched instrument where the sample re-triggers at the frequency of the held MIDI note.</li>
+                <li><strong>Mode:</strong> Manually switch the track between <strong>Sample</strong> and <strong>Synth</strong> modes.</li>
+                <li><strong>Mute Group:</strong> Assign the track to a mute group (1-8). When any track in a group is triggered, all other tracks in the same group are silenced. Perfect for open/closed hi-hats.</li>
+            </ul>
+
+            <h3>6. Troubleshooting</h3>
+            <ul>
+                <li><strong>No Sound:</strong> Check that the track is not muted, another track is not soloed, the step is active, and a sample is loaded (or it's in synth mode). Ensure your DAW is playing.</li>
+                <li><strong>CPU Usage High:</strong> High track counts, many active LFOs, or using the TimeStretch algorithm can be CPU-intensive. Bounce tracks to audio if needed.</li>
+                <li><strong>Activation Issues:</strong> Ensure you are using the exact email from your purchase and the correct activation code. Contact support if problems persist.</li>
+                <li><strong>Contact:</strong> For bugs, questions, or feedback, please email <a href="mailto:beatforgehelp@gmail.com">beatforgehelp@gmail.com</a>.</li>
             </ul>
         </div>
     </div>
 </body>
 </html>
+
+
